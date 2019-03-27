@@ -10,8 +10,8 @@ def convert_range(OldValue, OldMax, OldMin, NewMax, NewMin):
     NewMax = NewMax
     NewMin = NewMin
     NewRange = (NewMax - NewMin)
-    portion = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin
-    NewValue = NewMin + portion 
+    NewValue = ((OldValue/OldRange)*NewRange)
+    
 
     #print (NewValue)
     return (NewValue)
